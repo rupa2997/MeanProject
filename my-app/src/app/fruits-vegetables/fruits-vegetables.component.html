@@ -1,0 +1,27 @@
+<div class="row  d-flex justify-content-center align-items-center"
+    style="height: 60px;background-color: rgba(199, 247, 255, 1);">
+    <div class="col-12 d-flex justify-content-center"> Fruits & Vegetables</div>
+</div>
+<div class="row m-1">
+    <div class="col-12 mt-2 col-md-3" *ngFor="let item of data1">
+        <div class="card product-card">
+            <img class="card-img-top img-fluid" src="./assets/Fruits&veggie/{{item.FruitVegiiImage}}.jpg"
+                style="height:35vh;">
+            <div class="card-body">
+                <div class="card-title d-flex justify-content-between">{{item.FruitVegiiName}}
+                    <div class="col-5 ">{{item.FruitVegiiValue}} </div>
+                </div>
+                <p class="card-text">{{item.FruitVegiiDescription}}
+                </p>
+                <div class="display:flex; justify-content:space-around">
+                    <div><a class="btn btn-outline-dark" style="margin-right: 50px;">Buy Now</a><a
+                            class="btn btn-outline-warning">Add To Cart
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

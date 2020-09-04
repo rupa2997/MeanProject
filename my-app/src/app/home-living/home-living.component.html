@@ -1,0 +1,28 @@
+<div class="row  d-flex justify-content-center align-items-center"
+    style="height: 60px;background-color: rgba(199, 247, 255, 1);">
+    <div class="col-12 d-flex justify-content-center"> Home & Living</div>
+</div>
+<div class="row m-1">
+    <div class="col-12 mt-2 col-md-3" *ngFor="let item of data2">
+        <div class="card product-card">
+            <img class="card-img-top img-fluid" src="./assets/Home&Living/{{item.ProductImage}}.jpg"
+                style="height:35vh;">
+            <div class="card-body">
+                <div class="card-title d-flex justify-content-between">{{item.ProductName}}
+                    <div class="col-5 ">{{item.ProductValue}} </div>
+                </div>
+                <p class="card-text">{{item.ProductDescription}}
+                </p>
+                <div class="display:flex; justify-content:space-around">
+                    <div><a class="btn btn-outline-dark" style="margin-right: 50px;" (click)="BuyNow(item)"
+                            type="button" data-toggle="modal" data-target="#exampleModal">Buy
+                            Now</a><a class="btn btn-outline-warning">Add To Cart
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 d-none d-md-block image-container">
+            <img src="./assets/login1.png" alt="" style="background-size: cover;
+            height: 100vh;">
+        </div>
+        <div class="col-lg-5 col-md-5 form-container">
+            <div class="col-lg-8 col-md-10 col-sm-9 col-xs-12 form-box text-center" [formGroup]="fbFormGroup">
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    Id or Password is wrong!!
+                </div>
+                <div class="logo mb-3">
+                    <img src="./assets/logo.png" width="50px" style="border-radius:10px;">
+                </div>
+                <div class="heading mb-4">
+                    <h4>Login into BigBasket</h4>
+                </div>
+
+                <div class="form-input">
+                    <span><i class="fa fa-envelope"></i></span>
+                    <input type="email" placeholder="Email Address" formControlName="Email" required>
+                </div>
+                <div class="form-input">
+                    <span><i class="fa fa-lock"></i></span>
+                    <input type="password" name="" id="" placeholder="Password" formControlName="Password" required>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6 d-flex">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" id="cb1">
+                            <label for="cb1" class="cutom-control-label text-white">
+                                Remember
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a routerLink="/ForgotPassword" class="forget-link">Forget Password</a>
+                    </div>
+                </div>
+                <div class="text-left mb-3">
+                    <button type="submit" class="btn" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+                        Login
+                    </button>
+                </div>
+                <div class="text-center mb-2">
+                    <div class="mb-3" style="color: #777;">or login with</div>
+                    <a href="" class="btn btn-social btn-facebook">facebook</a>
+                    <a href="" class="btn btn-social btn-google">google</a>
+                    <a href="" class="btn btn-social btn-twitter">twitter</a>
+                </div>
+                <div style="color: #777;">Don't Have an account
+                    <a routerLink="/SignupPage" class="register-link">Register
+                        Here</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

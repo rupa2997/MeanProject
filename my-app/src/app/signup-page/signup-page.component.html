@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <div class="row no-gutters justify-content-center  m-3">
+        <div class="col-12 col-s-12 col-md-7">
+            <img src="./assets/signupage.jpg" class="img-fluid" style="height:100%;width:100vw;object-fit: cover;">
+        </div>
+        <div class="col-xs-12 col-s-12 col-md-5 px-5 pt-10"
+            style="background-image: linear-gradient(rgb(187, 182, 182), rgba(67, 214, 162,1),white);"
+            [formGroup]="fbFormGroup">
+
+
+
+            <div class="row" style="display: flex;">
+                <img src="./assets/logo.png" alt="" style="width: 30px;height: 30px;margin:10px;">
+                <h3 style="margin-bottom: 22px;margin-top: 12px;color:cornsilk;font-family: geneva;">Sign Up</h3>
+
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label for="username"> UserName</label>
+                    <input type="text" placeholder="Name" class="form-control my-1"
+                        style="border:none;border-bottom:solid 3px rgb(4, 90, 68);" formControlName="Username" />
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label for="Email">Email</label>
+                    <input type="text" placeholder="Email" class="form-control  my-1 "
+                        style="border:none;border-bottom:solid 1px grey;" formControlName="Email" />
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label for="Password">Password</label>
+                    <input type="Password" placeholder="Password" class="form-control  my-1 "
+                        style="border:none;border-bottom:solid 1px grey;" formControlName="Password">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label for="Password">Confirm Password</label>
+                    <input type="password" placeholder="Password" class="form-control  my-1 "
+                        style="border:none;border-bottom:solid 1px grey;" formControlName="CPassword">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label for="Mobile_No">Mobile No</label>
+                    <input type="text" placeholder="Mobile No" class="form-control  my-1"
+                        style="border:none;border-bottom:solid 1px grey;" formControlName="Mobile_No">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7">
+
+                    <label><input type="checkbox" value=""> I agree to the Terms of User</label>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-7 ">
+
+                    <button type="button" class="btn " [disabled]="!fbFormGroup.valid" (click)="registerHere()">Sign
+                        Up</button>
+                    <div style="display:flex">
+                        <h6>Already Have An Account?</h6>
+                        <button type="button" class="btn " (click)="loginpage()">Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                Id or Password is wrong!!
+            </div>
+        </div>
+    </div>
+</div>
